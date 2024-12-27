@@ -6,22 +6,20 @@ import PowerGenerator from "./components/PowerGenerator"; // Your power generato
 import FractionGenerator from "./components/FractionGenerator"; // Your fraction generator component
 import Footer from './components/Footer'; // Import the Footer component
 import MathAnimation from "./components/MathAnimation";
-import './global.css';  // Make sure App.css is imported
-
-
+import './global.css';  // Make sure global.css is imported
 
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/UFP_Generator"> {/* Set basename to the subpath */}
       <MathAnimation />
-       <Footer />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/power-generator" element={<PowerGenerator />} />
         <Route path="/fraction-generator" element={<FractionGenerator />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
