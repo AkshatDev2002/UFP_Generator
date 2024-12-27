@@ -1,0 +1,321 @@
+/* Root variables for padding and margin to maintain consistency */
+:root {
+  --padding-small: 10px;
+  --padding-medium: 20px;
+  --margin-small: 10px;
+  --margin-medium: 20px;
+}
+
+/* Set the background image globally */
+body {
+  background-image: url('./Assets/bg.jpg');
+  background-size: cover; /* Ensures the background image covers the entire page */
+  background-position: center; /* Centers the background image */
+  background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+  height: 100vh; /* Makes the body take up the full height of the viewport */
+  margin: 0; /* Removes the default body margin */
+  font-family: Arial, sans-serif; /* Sets a clean, readable font */
+  position: relative; /* Allows for stacking of components */
+}
+
+/* Input fields styling */
+input {
+  width: 80%; /* Make inputs take up full container width */
+  padding: var(--padding-small);
+  margin-bottom: 15px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+}
+
+/* Button styling */
+button {
+  padding: var(--padding-small) var(--padding-medium);
+  background-color: #f39c12; /* Yellow-orange background */
+  color: #fff; 
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+button:hover {
+  background-color: #b67917; /* Darker shade of the button on hover */
+}
+
+/* Class for a secondary button */
+.b1 {
+  padding: var(--padding-small) var(--padding-medium);
+  background-color: #f39c12; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.b1:hover {
+  background-color: #b67917; /* Darker shade on hover */
+}
+
+/* Overlay with transparency effect */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
+  z-index: 0; /* Overlay is beneath all elements */
+}
+
+/* About UFP section */
+.about-ufp {
+  position: relative;
+  max-width: 800px; /* Maximum width for larger screens */
+  margin: 30px auto; /* Centers the content */
+  padding: var(--padding-medium); /* Using a variable for padding */
+  background: rgba(0, 0, 0, 0.848); /* Semi-transparent background */
+  color: #ffffff;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+  z-index: 3;
+  width: 90%; /* Ensures it is responsive on smaller screens */
+}
+
+/* Heading styles for .about-ufp */
+.about-ufp h2 {
+  text-align: center;
+  font-size: 2rem; /* Font size for larger screens */
+  margin-bottom: 20px;
+}
+
+/* Subheading styles */
+.about-ufp h3 {
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Paragraph and list item styling for readability */
+.about-ufp p, .about-ufp li {
+  font-size: 1rem; /* Adjust font size for readability */
+  line-height: 1.6; /* Increases text readability */
+}
+
+/* List styling */
+.about-ufp ul {
+  list-style-type: disc; /* Disc style for the list */
+  padding-left: 20px; /* Adds padding to the left of the list */
+}
+
+/* Get Started Button */
+.get-started-button {
+  display: inline-block;
+  padding: var(--padding-small) var(--padding-medium); /* Padding using variables */
+  margin-top: 20px;
+  margin-left: auto; /* Centers the button horizontally */
+  margin-right: auto; /* Centers the button horizontally */
+  background-color: #f39c12; /* Orange background */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for Get Started button */
+.get-started-button:hover {
+  background-color: #b67917; /* Darker shade on hover */
+}
+
+
+/* Math operators container for animation */
+.math-operators-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Hides symbols outside container */
+  z-index: 1;
+  pointer-events: none; /* Prevents interaction with animation */
+}
+
+/* Fraction generator container */
+.fraction-generator-container, .generator-container {
+  position: relative;
+  max-width: 400px; /* Restricts container width */
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(255, 158, 3, 0.867);
+  text-align: center;
+  z-index: 2;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  z-index: 2;
+  margin-top: 200px; /* Adds spacing above footer */
+  background: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  color: #6c757d;
+  width: 100%; /* Ensure footer takes up full width */
+}
+
+
+/* Math operator styling for animation */
+.math-operator {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f39c12; 
+  animation: fall 5s linear infinite;
+  z-index: 1;
+  text-shadow: 
+    0 0 5px rgba(238, 198, 98, 0.673),
+    0 0 10px rgba(200, 166, 81, 0.458),
+    0 0 15px rgba(183, 144, 45, 0.275),
+    0 0 20px rgba(183, 135, 14, 0.4);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Keyframes for falling math operators */
+@keyframes fall {
+  0% { transform: translateY(-100%); opacity: 1; }
+  100% { transform: translateY(500%); opacity: 1; }
+}
+
+/* Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-small) var(--padding-medium);
+  background: linear-gradient(to right, #add8e6, #f8eecb);
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  height: 50px;
+  width: auto;
+  position: relative;
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0, 0); clip-path: inset(0% 0% 0% 0%); }
+  10% { transform: translate(-2px, -2px); clip-path: inset(20% 0% 70% 0%); }
+  20% { transform: translate(2px, 2px); clip-path: inset(10% 0% 80% 0%); }
+  30% { transform: translate(1px, -1px); clip-path: inset(30% 0% 60% 0%); }
+  40% { transform: translate(-1px, 1px); clip-path: inset(15% 0% 85% 0%); }
+  50% { transform: translate(0, 0); clip-path: inset(0% 0% 0% 0%); }
+  60% { transform: translate(-3px, -3px); clip-path: inset(10% 0% 75% 0%); }
+  70% { transform: translate(3px, 3px); clip-path: inset(25% 0% 50% 0%); }
+  80% { transform: translate(-1px, 1px); clip-path: inset(5% 0% 90% 0%); }
+  90% { transform: translate(2px, -2px); clip-path: inset(0% 0% 0% 0%); }
+  100% { transform: translate(0, 0); clip-path: inset(0% 0% 0% 0%); }
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar-link {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #f39c12;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.navbar-links {
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(255, 158, 3, 0.867);
+  display: none;
+  width: 200px;
+  border-radius: 8px;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+
+.navbar-link {
+  margin: 10px 0;
+  text-align: left;
+}
+
+/* For larger screens (tablets and above) */
+@media (min-width: 768px) {
+  .navbar-links {
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    display: flex;
+    width: auto;
+    padding: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-link {
+    margin: 0 10px;
+  }
+
+  /* About UFP section responsiveness */
+  .about-ufp {
+    max-width: 800px;
+    margin: 30px auto;
+    width: 90%;
+  }
+}
+
+/* For medium screens (mobile landscape or small tablets) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .navbar-toggle {
+    display: block;
+  }
+}
