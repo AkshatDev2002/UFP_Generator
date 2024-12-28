@@ -11,7 +11,7 @@ import './global.css';  // Make sure global.css is imported
 
 const App = () => {
   return (
-    <Router basename="/UFP_Generator"> {/* Set basename to the subpath */}
+    <Router> {/* Set basename to the subpath */}
       <MathAnimation />
       <Navbar />
       <Routes>
