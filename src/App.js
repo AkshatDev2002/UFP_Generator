@@ -8,10 +8,9 @@ import Footer from './components/Footer'; // Import the Footer component
 import MathAnimation from "./components/MathAnimation";
 import './global.css';  // Make sure global.css is imported
 
-
 const App = () => {
   return (
-    <Router> {/* Set basename to the subpath */}
+    <Router basename="/UFP_Generator"> {/* Set basename to the subpath */}
       <MathAnimation />
       <Navbar />
       <Routes>

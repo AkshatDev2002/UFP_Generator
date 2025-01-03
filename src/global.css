@@ -219,21 +219,33 @@ footer {
   height: 50px;
   width: auto;
   position: relative;
-  animation: glitch 2s infinite;
+  transition: transform 0.5s ease-in-out;
 }
 
-@keyframes glitch {
-  0% { transform: translate(0, 0); clip-path: inset(0% 0% 0% 0%); }
-  10% { transform: translate(-2px, -2px); clip-path: inset(20% 0% 70% 0%); }
-  20% { transform: translate(2px, 2px); clip-path: inset(10% 0% 80% 0%); }
-  30% { transform: translate(1px, -1px); clip-path: inset(30% 0% 60% 0%); }
-  40% { transform: translate(-1px, 1px); clip-path: inset(15% 0% 85% 0%); }
-  50% { transform: translate(0, 0); clip-path: inset(0% 0% 0% 0%); }
-  60% { transform: translate(-3px, -3px); clip-path: inset(10% 0% 75% 0%); }
-  70% { transform: translate(3px, 3px); clip-path: inset(25% 0% 50% 0%); }
-  80% { transform: translate(-1px, 1px); clip-path: inset(5% 0% 90% 0%); }
-  90% { transform: translate(2px, -2px); clip-path: inset(0% 0% 0% 0%); }
-  100% { transform: translate(0, 0); clip-path: inset(0% 0% 0% 0%); }
+.img:hover {
+  animation: shake 0.5s ease-in-out;
+}
+
+.img:active {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+      transform: translateX(0);
+  }
+  25% {
+      transform: translateX(-5px); /* Moves left */
+  }
+  50% {
+      transform: translateX(5px);  /* Moves right */
+  }
+  75% {
+      transform: translateX(-5px); /* Moves left */
+  }
+  100% {
+      transform: translateX(0);    /* Returns to original position */
+  }
 }
 
 /* Navbar Links */
