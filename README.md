@@ -24,7 +24,6 @@ A web application for generating Unicode-supported fractions and power symbols, 
 
 - **Frontend:** React.js, React Router
 - **Styling:** CSS, Material UI
-- **Database & Authentication:** Supabase
 - **Animations:** CSS keyframes and animations.
 
 ---
